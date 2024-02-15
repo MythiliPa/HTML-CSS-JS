@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Job Application Form</title>
+<style>
+      /*Internal CSS using element name*/
+            body{background-color:purple;
+             }
+             h1{font-style: italic;
+              font-size: 30px;
+              color: white;
+              background-color:#56004f;}
+           .l{
+        width: 450px;
+        display:inline-block; 
+        text-align:left;
+        }
+        
+        .f{
+	padding:8px;
+	width:25%;
+	border:0.5px solid;
+	
+}
+      </style>
+      <script type="text/javascript">
+         function generateCaptcha()
+         {
+             var alpha = new Array('A','B','C','D','E','F','G','H','I','J','K','L','M',
+                                   'N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+                                   'a','b','c','d','e','f','g','h','i','j','k','l','m',
+                                   'n','o','p','q','r','s','t','u','v','w','x','y','z');
+             var i;
+             for (i=0;i<4;i++){
+               var a = alpha[Math.floor(Math.random() * alpha.length)];
+               var b = alpha[Math.floor(Math.random() * alpha.length)];
+               var c = alpha[Math.floor(Math.random() * alpha.length)];
+               var d = alpha[Math.floor(Math.random() * alpha.length)];
+              }
+            var code = a + '' + b + '' + '' + c + '' + d;
+            document.getElementById("mainCaptcha").value = code
+          }
+          function CheckValidCaptcha(){
+              var string1 = removeSpaces(document.getElementById('mainCaptcha').value);
+              var string2 = removeSpaces(document.getElementById('txtInput').value);
+              if (string1 == string2){
+         document.getElementById('success').innerHTML = "Form is validated Successfully";
+         //alert("Form is validated Successfully");
+                return true;
+              }
+              else{      
+         document.getElementById('error').innerHTML = "Please enter a valid captcha.";
+         //alert("Please enter a valid captcha.");
+                return false;        
+              }
+          }
+          function removeSpaces(string){
+            return string.split(' ').join('');
+          }
+      </script>   
+</head>
+<body onload="generateCaptcha();">
+<h1>Application form</h1>
+    <form style="color:white;">  
+        <label class="l">First name:</label>
+        <input class="f" type="text" name="firstname" placeholder="Enter your first name"><br><br>
+        <label class="l">Last name:</label>
+        <input class="f" type="text" name="lastname" placeholder="Enter your last name"><br><br>  
+       <label class="l">Email address:</label>
+        <input class="f" type="email" name="email" placeholder="Enter your email address" required><br><br>
+        <label class="l">Telephone number:</label>
+        <input class="f" type="tel" name="telephone" required><br><br>
+          <label class="l">Address for communication:</label><br>
+          <label class="l">Line1:</label>
+          <input class="f" type="text" name="address" size="40"><br>
+          <label class="l">Line2:</label>
+          <input class="f" type="text" name="address" size="40"><br>
+          <label class="l">City:</label>
+          <input class="f" type="text" name="city"><br>
+          <label class="l">Province:</label>
+          <input class="f" type="text" name="province"><br>
+          <label class="l">Pincode:</label>
+          <input class="f" type="text" name="pincode"><br><br>
+          <label class="l">Years of experience:</label><br><br>
+          <input class="f" type="number" name="num"  ><br><br>
+         
+          <label class="l">LinkedIn URL:</label><br>
+          <input class="f" type="url" name="website" placeholder="http://example.com"><br><br>
+          <label class="l">Upload your resume:</label>
+          <input  type="file" name="newfile" ><br>
+          
+          <h1>Please please fill the captcha</h1>
+         <table>
+            <tr>
+               <td>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <input type="text" 
+                  id="mainCaptcha" readonly="readonly"/> 
+                  <input type="button" 
+                  id="refresh" value="Refresh" onclick="generateCaptcha();" />
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <input type="text" id="txtInput"/>   
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <input id="Button1" type="button" 
+                  value="Submit" onclick="CheckValidCaptcha();"/>
+               </td>
+            </tr>
+            <tr>
+               <td><span id="error" style="color:red"></span></td>
+            </tr>
+            <tr>
+               <td><span id="success" style="color:green"></span></td>
+            </tr>
+         </table>
+          
+      
+          
+    </form>  
+</body>
+</html>
