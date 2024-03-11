@@ -1,0 +1,661 @@
+<!DOCTYPE html5 >
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>SSC form registration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="SSCform.css">
+
+
+<style>
+body {
+	margin: 0px;
+}
+
+.first {
+	padding: 10px;
+	background-color: grey;
+	color: white;
+}
+
+span:hover {
+	display: block;
+	cursor: pointer;
+}
+
+.second {
+	
+	background-color: white;
+	float: left;
+	margin-left: 200px;
+	margin-right: 100px;
+	font-size: 25px;
+	color: blue;
+}
+
+.third {
+	padding: 5px 10px 15px 20px;
+	float: left;
+}
+
+.icon {
+	display: inline-block;
+	border-radius: 50%;
+	margin-top: 40px;
+}
+
+h1 {
+	border-bottom: 1 px grey;
+}
+
+a:hover {
+	text-decoration: none;
+	color: red;
+}
+
+.icontext {
+	color: blue;
+	display: inline-block;
+	font-size: 20px;
+	text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+</style>
+</head>
+
+<body>
+<div class="first">
+		<span>Feedback</span>
+	</div>
+	<div class="col-12">
+	
+	
+		<div class="second">
+		<img src="ssc-logo.png" /> 
+			STAFF SELECTION COMMISSSION
+			
+		</div>
+		<div class="third">
+			<div class="icon">
+				<a href="#"><i class="fa fa-home"
+					style="font-size: 40px; color: lightblue; text-shadow: 2px 2px 4px #000000;"></i></a>
+			</div>
+			<div class="icontext">
+				<a href="#"> HOME</a>
+			</div>
+		</div>
+		<div class="third">
+			<div class="icon">
+				<a href="#"><i class="fa fa-file"
+					style="font-size: 40px; color: orange; text-shadow: 2px 2px 4px #000000;"></i></a>
+			</div>
+			<div class="icontext">
+				<a href="#">APPLY </a>
+			</div>
+		</div>
+		<div class="third">
+			<div class="icon">
+				<a href="#"><i class="fa fa-bars"
+					style="font-size: 40px; color: green; text-shadow: 2px 2px 4px #000000;"></i></a>
+			</div>
+			<div class="icontext">
+				<a href="#"> ANSWER KEY</a>
+			</div>
+		</div>
+<img src="right-logo.png" />
+	</div>
+	<br>
+
+
+	<form>
+		<div class="container" >
+			<h3>BASIC DETAILS</h3>
+			<div class="con">
+				<div
+					style="font-weight: bold; font-size: 16px; color: red; font-family: arial">NOTE:
+					Candidates must be cautious while filling up Registration details.
+					Your candidature may get cancelled in case incorrect/ wrong
+					information is furnished.</div>
+				<br> <br> <label class="l">1. Do you have Aadhaar
+					? <sup>&#9733;</sup>
+				</label> 
+				<input checked="True" id="rbAadharYes" name="DoyouhaveAadhar" type="radio"  onclick="DoYouHaveAadhaar()" /> 
+				<label for="rbAadharYes">Yes</label>
+				 <input id="rbAadharNo" name="DoyouhaveAadhar" type="radio" onclick="DoYouHaveAadhaar()" /> 
+				 <label for="rbAadharNo">No</label>
+			    <br> <br> 
+				<label class="l">1a. Aadhaar Number <sup>&#9733;</sup>
+				</label> 
+				<input class="f" disabled="disabled" id="lblAadharSupp"
+					maxlength="24" name="AadharNumber" type="text" value="" /> <br>
+				<label class="insrctions"
+					for="Aadhaar_Number_should_be_same_as_mentioned_in_Aadhaar_Card">Aadhaar
+					Number should be same as mentioned in Aadhaar Card</label>
+					 <br>
+					  <br>
+				<label class="l">1b. Verify Aadhaar Number <sup>&#9733;</sup>
+				</label> 
+				<input class="f" disabled="disabled" id="lblAadharSupp1"
+					maxlength="24" name="AadharNumber" type="text" value="" /> <br>
+				<br> <label class="l">1c. Type of ID </label> <select disabled="disabled" class="h" id="IDnumbersupp1"
+					 name="TypeofID"><option value="">--Select--</option>
+					<option value="1">Driving License</option>
+					<option value="2">Employer ID (Govt./PSU/Private)</option>
+					<option value="3">PAN Card</option>
+					<option value="4">Passport</option>
+					<option value="5">School/College ID Card</option>
+					<option value="6">Voter ID Card</option>
+				</select> <label class="insrctions"
+					for="Type_of_ID_and_ID_Number_to_be_provided_if_you_don_t_want_to_give_Aadhaar_number">
+					Type of ID and ID Number to be provided if you don&#39;t want to
+					give Aadhaar number</label> <br>
+				<br>
+				<label class="l" >1d. ID Number <sup>&#9733;</sup></label>
+				<input class="f" disabled="disabled" id="IDnumbersupp" maxlength="20"
+					name="IDnumber" type="text" value="" /> <br>
+				<br>
+				<label class="l">2a. Name <sup>&#9733;</sup></label> <input
+					class="f" id="Name" maxlength="60" name="Name" type="text" value="" />
+				<label class="insrctions">1. Name should be same as
+					mentioned in Matriculation Certificate</label> <label
+					class="insrctions ">2. Please enter name without any
+					salutation (i e Shri/ Smt/ Mr/ Mrs/ Ms/ Dr/ Prof)</label> <br>
+				<br>
+				<label class="l">2b. Verify Name <sup>&#9733;</sup></label> <input
+					class="f" id="VerifyName" maxlength="60" name="VerifyName"
+					type="text" value="" /> <br>
+				<br>
+				<label class="l">2c. Have you ever changed Name? </label> 
+					<input data-val="true"
+					data-val-required="The HaveEverChangedName field is required."
+					id="rbHaveEverChangedNameYes" name="HaveEverChangedName"
+					type="radio" value="Yes" onclick="HaveYouEverChangedName()"/> <label for="rbHaveEverChangedNameYes">Yes</label>
+				 <input checked="True" id="rbHaveEverChangedNameNo"
+					name="HaveEverChangedName" type="radio" value="No" onclick="HaveYouEverChangedName()"/> 
+					<label
+					for="rbHaveEverChangedNameNo">No</label>
+				 <br>
+				<br>
+				<label class="l">2d. New Name / Changed
+					Name </label> <input class="f" id="lblnewnamesupp"  maxlength="60" name="NewName"
+					type="text" value="" disabled="disabled"/> <br>
+				<br>
+				<label class="l">3a. Father's Name <sup>&#9733;</sup></label> <input
+					class="f" id="FatherName" maxlength="60" name="FatherName"
+					type="text" value="" /> <label class="insrctions">1.
+					Father's Name should be same as mentioned in Matriculation
+					Certificate</label> <label class="insrctions incfont">2. Please
+					enter name without any salutation (i e Mr/ Shri/ Late/ Dr/ Prof etc</label>
+				<br>
+				<br>
+				<label class="l">3b. Verify Father's Name <sup>&#9733;</sup></label>
+				<input class="f" id="VerifyFatherName" maxlength="60"
+					name="VerifyFatherName" type="text" value="" /> <br>
+				<br>
+				<label class="l">4a. Mother's Name <sup>&#9733;</sup></label> <input
+					class="f" id="MotherName" maxlength="60" name="MotherName"
+					type="text" value="" /> <label class="insrctions incfont">1.
+					Mother's Name should be same as mentioned in Matriculation
+					Certificate</label> <label class="insrctions incfont">2. Please
+					enter name without any salutation (i e Mrs/ Ms/ Smt/ Late/ Dr/ Prof
+					etc</label> <br>
+				<br> <label class="l">4b. Verify Mother's Name <sup>&#9733;</sup></label>
+				<input class="f" id="VerifyMotherName" maxlength="60"
+					name="VerifyMotherName" type="text" value="" /> <br>
+				<br>
+				<label class="l">5a. Date of Birth (DD/MM/YYYY) <sup>&#9733;</sup></label>
+				<input class="f" id="datepicker" maxlength="10" name="DateOfBirth"
+					type="text" value="" /> <label class="insrctions"
+					for="Date_of_Birth_should_be_same_as_mentioned_in_Matriculation_Certificate">Date
+					of Birth should be same as mentioned in Matriculation Certificate</label> <br>
+				<br>
+				<label class="l">5b. Verify Date of Birth (DD/MM/YYYY) <sup>&#9733;</sup></label>
+				<input class="f" id="datepicker" maxlength="10"
+					name="VerifyDateOfBirth" type="date" value="" /> <br>
+				<br>
+				<label class="l">6. Matriculation (10<sup><font
+						color="#000000">th</font></sup> Class) Examination details :
+				</label> <br>
+				<br>
+				<label class="l"> (i). Education Board <sup>&#9733;</sup></label> <select
+					class="h" id="EducationBoard" name="EducationBoard"><option
+						value="">--Select--</option>
+					<option value="1">Central Board of Secondary Education
+						(CBSE)</option>
+					<option value="2">Council for The Indian School
+						Certificate Examinations (ICSE)</option>
+					<option value="3">National Institute of Open Schooling
+						(NIOS)</option>
+					<option value="4">Aligarh Muslim University, Aligarh</option>
+					<option value="5">Andhra Pradesh Open School Society</option>
+					<option value="6">Assam Sanskrit Board</option>
+					<option value="7">Banasthali Vidyapith, Rajasthan</option>
+					<option value="8">Bihar Board of Open Schooling And
+						Examination</option>
+					<option value="9">Bihar Sanskrit Shiksha Board</option>
+					<option value="10">Bihar School Examination Board</option>
+					<option value="11">Bihar State Madrasa Education Board</option>
+					<option value="12">Board of High School And Intermediate
+						Education Uttar Pradesh</option>
+					<option value="13">Board of School Education Haryana</option>
+					<option value="14">Board of Secondary Education Andhra
+						Pradesh</option>
+					<option value="15">Board of Secondary Education Assam</option>
+					<option value="16">Board of Secondary Education, Odisha</option>
+					<option value="17">Board of Secondary Education, Rajasthan</option>
+					<option value="18">Chhatisgarh State Open School</option>
+					<option value="19">Chhattisgarh Board of Secondary
+						Education</option>
+					<option value="20">Chhattisgarh Sanskrit Board</option>
+					<option value="21">Directorate of Army Education, New
+						Delhi</option>
+					<option value="22">Directorate of Government Examinations,
+						Tamil Nadu</option>
+					<option value="23">Goa Board of Secondary And Higher
+						Secondary Education</option>
+					<option value="24">Gujarat Secondary And Higher Secondary
+						Education Board</option>
+					<option value="25">Gurukul Kangri Vishwavidyalaya,
+						Haridwar</option>
+					<option value="26">Haryana Open School</option>
+					<option value="27">Himachal Pradesh Board of School
+						Education</option>
+					<option value="28">Himachal Pradesh State Open School</option>
+					<option value="29">Jamia Miliya Hamdard University</option>
+					<option value="30">Jamia Miliya Islamia, New Delhi</option>
+					<option value="31">Jammu and Kashmir State Board of School
+						Education</option>
+					<option value="32">Jammu and Kashmir State Open School</option>
+					<option value="33">Jharkhand Academic Council Ranchi</option>
+					<option value="34">Karnataka Secondary Education
+						Examination Board</option>
+					<option value="35">Kerala Board of Public Examinations</option>
+					<option value="36">Madhya Pradesh Board of Secondary
+						Education</option>
+					<option value="37">Madhya Pradesh State Open School</option>
+					<option value="38">Maharashtra State Board of Secondary
+						And Higher Secondary Education</option>
+					<option value="39">Manipur Board of Secondary Education</option>
+					<option value="40">Meghalaya Board of School Education</option>
+					<option value="41">Mizoram Board of School Education</option>
+					<option value="42">Nagaland Board of School Education</option>
+					<option value="43">Punjab School Education Board</option>
+					<option value="44">Rajasthan State Open School</option>
+					<option value="45">Rashtriya Sanskrit Sansthan, New Delhi</option>
+					<option value="46">State Council for Open and Lifelong
+						Education - Kerala</option>
+					<option value="47">State Madrassa Education Board Assam</option>
+					<option value="48">Tamil Nadu Board of Secondary Education</option>
+					<option value="49">Tamilnadu Council for Open And Distance
+						Learning</option>
+					<option value="50">Tripura Board of Secondary Education</option>
+					<option value="51">Uttarakhand Board of School Education</option>
+					<option value="52">Uttrakhand Vidyalayi Shiksha Parishad</option>
+					<option value="53">Uttranchal Shiksha Avam Pariksha
+						Parishad</option>
+					<option value="54">West Bengal Board of Madrasa Education</option>
+					<option value="55">West Bengal Board of Secondary
+						Education</option>
+					<option value="56">The West Bengal Council of Rabindra
+						Open Schooling</option>
+					<option value="57">International Board</option>
+					<option value="58">Board of Secondary Education Telangana</option>
+					<option value="59">UP Board of Madrasa Education</option>
+					<option value="60">Maharshi Patanjali Sanskrit Sansthan
+						Bhopal</option>
+					<option value="61">Visva Bharti University</option>
+					<option value="62">Dayalbagh Education Institute</option>
+					<option value="63">Gurukul Mahavidyalaya Jwalapur Haridwar</option>
+					<option value="64">Uttar Pradesh Board of Secondary
+						Sanskrit Education</option>
+					<option value="65">Jharkhand Secondary Examination Board</option>
+					<option value="66">Sampoornanand Sanskrit Vishwavidyalaya</option>
+					<option value="70">Telangana Open School Society</option>
+					<option value="71">Uttarakhand Sanskrit Shiksha Board</option>
+				</select> <label class="insrctions"
+					for="Education_Board_of_Matriculation_Examination">Education
+					Board of Matriculation Examination</label> <br>
+				<br>
+				<label class="l"> (ii). Verify Education Board <sup>&#9733;</sup></label>
+				<select class="h" id="ddlEducationBoard" name="EducationBoard"><option
+						value="">--Select--</option>
+					<option value="1">Central Board of Secondary Education
+						(CBSE)</option>
+					<option value="2">Council for The Indian School
+						Certificate Examinations (ICSE)</option>
+					<option value="3">National Institute of Open Schooling
+						(NIOS)</option>
+					<option value="4">Aligarh Muslim University, Aligarh</option>
+					<option value="5">Andhra Pradesh Open School Society</option>
+					<option value="6">Assam Sanskrit Board</option>
+					<option value="7">Banasthali Vidyapith, Rajasthan</option>
+					<option value="8">Bihar Board of Open Schooling And
+						Examination</option>
+					<option value="9">Bihar Sanskrit Shiksha Board</option>
+					<option value="10">Bihar School Examination Board</option>
+					<option value="11">Bihar State Madrasa Education Board</option>
+					<option value="12">Board of High School And Intermediate
+						Education Uttar Pradesh</option>
+					<option value="13">Board of School Education Haryana</option>
+					<option value="14">Board of Secondary Education Andhra
+						Pradesh</option>
+					<option value="15">Board of Secondary Education Assam</option>
+					<option value="16">Board of Secondary Education, Odisha</option>
+					<option value="17">Board of Secondary Education, Rajasthan</option>
+					<option value="18">Chhatisgarh State Open School</option>
+					<option value="19">Chhattisgarh Board of Secondary
+						Education</option>
+					<option value="20">Chhattisgarh Sanskrit Board</option>
+					<option value="21">Directorate of Army Education, New
+						Delhi</option>
+					<option value="22">Directorate of Government Examinations,
+						Tamil Nadu</option>
+					<option value="23">Goa Board of Secondary And Higher
+						Secondary Education</option>
+					<option value="24">Gujarat Secondary And Higher Secondary
+						Education Board</option>
+					<option value="25">Gurukul Kangri Vishwavidyalaya,
+						Haridwar</option>
+					<option value="26">Haryana Open School</option>
+					<option value="27">Himachal Pradesh Board of School
+						Education</option>
+					<option value="28">Himachal Pradesh State Open School</option>
+					<option value="29">Jamia Miliya Hamdard University</option>
+					<option value="30">Jamia Miliya Islamia, New Delhi</option>
+					<option value="31">Jammu and Kashmir State Board of School
+						Education</option>
+					<option value="32">Jammu and Kashmir State Open School</option>
+					<option value="33">Jharkhand Academic Council Ranchi</option>
+					<option value="34">Karnataka Secondary Education
+						Examination Board</option>
+					<option value="35">Kerala Board of Public Examinations</option>
+					<option value="36">Madhya Pradesh Board of Secondary
+						Education</option>
+					<option value="37">Madhya Pradesh State Open School</option>
+					<option value="38">Maharashtra State Board of Secondary
+						And Higher Secondary Education</option>
+					<option value="39">Manipur Board of Secondary Education</option>
+					<option value="40">Meghalaya Board of School Education</option>
+					<option value="41">Mizoram Board of School Education</option>
+					<option value="42">Nagaland Board of School Education</option>
+					<option value="43">Punjab School Education Board</option>
+					<option value="44">Rajasthan State Open School</option>
+					<option value="45">Rashtriya Sanskrit Sansthan, New Delhi</option>
+					<option value="46">State Council for Open and Lifelong
+						Education - Kerala</option>
+					<option value="47">State Madrassa Education Board Assam</option>
+					<option value="48">Tamil Nadu Board of Secondary Education</option>
+					<option value="49">Tamilnadu Council for Open And Distance
+						Learning</option>
+					<option value="50">Tripura Board of Secondary Education</option>
+					<option value="51">Uttarakhand Board of School Education</option>
+					<option value="52">Uttrakhand Vidyalayi Shiksha Parishad</option>
+					<option value="53">Uttranchal Shiksha Avam Pariksha
+						Parishad</option>
+					<option value="54">West Bengal Board of Madrasa Education</option>
+					<option value="55">West Bengal Board of Secondary
+						Education</option>
+					<option value="56">The West Bengal Council of Rabindra
+						Open Schooling</option>
+					<option value="57">International Board</option>
+					<option value="58">Board of Secondary Education Telangana</option>
+					<option value="59">UP Board of Madrasa Education</option>
+					<option value="60">Maharshi Patanjali Sanskrit Sansthan
+						Bhopal</option>
+					<option value="61">Visva Bharti University</option>
+					<option value="62">Dayalbagh Education Institute</option>
+					<option value="63">Gurukul Mahavidyalaya Jwalapur Haridwar</option>
+					<option value="64">Uttar Pradesh Board of Secondary
+						Sanskrit Education</option>
+					<option value="65">Jharkhand Secondary Examination Board</option>
+					<option value="66">Sampoornanand Sanskrit Vishwavidyalaya</option>
+					<option value="70">Telangana Open School Society</option>
+					<option value="71">Uttarakhand Sanskrit Shiksha Board</option>
+				</select> <br>
+				<br> <label class="l">(iii). Roll Number <sup>&#9733;</sup></label>
+				<input class="f" id="SecondaryRollNum" maxlength="15"
+					name="SecondaryRollNum" type="text" value="" /> <label
+					class="insrctions incfont">1. Roll Number should be same as
+					mentioned in Matriculation Certificate</label> <label class="insrctions ">2.
+					Only / and - are allowed , Please enter Roll number without any
+					other special character(s)</label> <label class="insrctions ">3. If
+					Roll Code is given in your Matriculation Certificate then enter
+					"Roll Code - Roll No."</label> <br>
+				<br>
+				<label class="l">(iv). Verify Roll Number <sup>&#9733;</sup></label>
+				<input class="f" id="VerifySecondaryRollNum" maxlength="15"
+					name="VerifySecondaryRollNum" type="text" value="" /> <br>
+				<br>
+				<label class="l">(v). Year of Passing <sup>&#9733;</sup></label> <select
+					class="h" id="Yearofpassing" name="Yearofpassing"><option
+						value="">--Select--</option>
+					<option value="2022">2022</option>
+					<option value="2021">2021</option>
+					<option value="2020">2020</option>
+					<option value="2019">2019</option>
+					<option value="2018">2018</option>
+					<option value="2017">2017</option>
+					<option value="2016">2016</option>
+					<option value="2015">2015</option>
+					<option value="2014">2014</option>
+					<option value="2013">2013</option>
+					<option value="2012">2012</option>
+					<option value="2011">2011</option>
+					<option value="2010">2010</option>
+					<option value="2009">2009</option>
+					<option value="2008">2008</option>
+					<option value="2007">2007</option>
+					<option value="2006">2006</option>
+					<option value="2005">2005</option>
+					<option value="2004">2004</option>
+					<option value="2003">2003</option>
+					<option value="2002">2002</option>
+					<option value="2001">2001</option>
+					<option value="2000">2000</option>
+					<option value="1999">1999</option>
+					<option value="1998">1998</option>
+					<option value="1997">1997</option>
+					<option value="1996">1996</option>
+					<option value="1995">1995</option>
+				</select> <br>
+				<br>
+				<label class="l">(vi). Verify Year of Passing <sup>&#9733;</sup></label>
+				<select class="h" id="ddlYearofpassing" name="Yearofpassing"><option
+						value="">--Select--</option>
+					<option value="2022">2022</option>
+					<option value="2021">2021</option>
+					<option value="2020">2020</option>
+					<option value="2019">2019</option>
+					<option value="2018">2018</option>
+					<option value="2017">2017</option>
+					<option value="2016">2016</option>
+					<option value="2015">2015</option>
+					<option value="2014">2014</option>
+					<option value="2013">2013</option>
+					<option value="2012">2012</option>
+					<option value="2011">2011</option>
+					<option value="2010">2010</option>
+					<option value="2009">2009</option>
+					<option value="2008">2008</option>
+					<option value="2007">2007</option>
+					<option value="2006">2006</option>
+					<option value="2005">2005</option>
+					<option value="2004">2004</option>
+					<option value="2003">2003</option>
+					<option value="2002">2002</option>
+					<option value="2001">2001</option>
+					<option value="2000">2000</option>
+					<option value="1999">1999</option>
+					<option value="1998">1998</option>
+					<option value="1997">1997</option>
+					<option value="1996">1996</option>
+					<option value="1995">1995</option>
+				</select> <br>
+				<br>
+				<label class="l">7a. Gender <sup>&#9733;</sup></label> <span>
+					<input id="rbMale" name="Gender" type="radio" value="2" /> <label
+					for="rbMale">Male</label>
+				</span> <span> <input id="rbFeMale" name="Gender" type="radio"
+					value="1" /> <label for="rbFeMale">Female</label>
+				</span> <span> <input id="rbOthers" name="Gender" type="radio"
+					value="3" /> <label for="rbOthers">Transgender</label>
+				</span> <br>
+				<br>
+				<label class="l">7b. Verify Gender <sup>&#9733;</sup></label> <span>
+					<input id="rbVerifyMale" name="VerifyGender" type="radio" value="2" />
+					<label for="rbVerifyMale">Male</label>
+				</span> <span> <input id="rbVerifyFeMale" name="VerifyGender"
+					type="radio" value="1" /> <label for="rbVerifyFeMale">Female</label>
+				</span> <span> <input id="rbVerifyOthers" name="VerifyGender"
+					type="radio" value="3" /> <label for="rbVerifyOthers">Transgender</label>
+				</span> <br>
+				<br>
+				<label class="l">8. Level of Educational Qualification <sup>&#9733;</sup></label>
+
+				<select class="h" id="Levelofeducationqualification"
+					name="Levelofeducationqualification"><option value="">--Select--</option>
+					<option value="1">Matriculation (10th)</option>
+					<option value="2">Higher Secondary (10+2)</option>
+					<option value="3">Diploma</option>
+					<option value="4">Graduation</option>
+					<option value="5">Post Graduation</option>
+					<option value="6">Ph.D</option>
+				</select> <br>
+				<br>
+				<label class="l">9a. Mobile Number <sup>&#9733;</sup>
+				</label> <input class="f" id="MobileNum" maxlength="10" name="MobileNum"
+					type="text" value="" /> <br>
+				<br>
+				<label class="l">9b. Verify Mobile Number <sup>&#9733;</sup>
+				</label> <input class="f" id="VerifyMobileNum" maxlength="10"
+					name="VerifyMobileNum" type="text" value="" /> <br>
+				<br>
+				<label class="l">10a. Email ID<sup>&#9733;</sup>
+				</label> <input class="f" id="EmailID" maxlength="60" name="EmailID"
+					type="text" value="" /> <br>
+				<br>
+				<label class="l">10b. Verify Email ID<sup>&#9733;</sup>
+				</label> <input class="f" id="VerifyEmailID" maxlength="60"
+					name="VerifyEmailID" type="text" value="" /> <br>
+				<br>
+				<label class="l"><b>&#8226;</b> State / UT of Permanent
+					Address <sup>&#9733;</sup> </label> <select class="h" id="OriginState"
+					name="OriginState"><option value="">--Select--</option>
+					<option value="1">Andaman and Nicobar Islands</option>
+					<option value="2">Andhra Pradesh</option>
+					<option value="3">Arunachal Pradesh</option>
+					<option value="4">Assam</option>
+					<option value="5">Bihar</option>
+					<option value="6">Chandigarh</option>
+					<option value="7">Chhattisgarh</option>
+					<option value="8">Dadra and Nagar Haveli and Daman and Diu</option>
+					<option value="10">Delhi</option>
+					<option value="11">Goa</option>
+					<option value="12">Gujarat</option>
+					<option value="13">Haryana</option>
+					<option value="14">Himachal Pradesh</option>
+					<option value="15">Jammu and Kashmir</option>
+					<option value="16">Jharkhand</option>
+					<option value="17">Karnataka</option>
+					<option value="18">Kerala</option>
+					<option value="37">Ladakh</option>
+					<option value="19">Lakshadweep</option>
+					<option value="20">Madhya Pradesh</option>
+					<option value="21">Maharashtra</option>
+					<option value="22">Manipur</option>
+					<option value="23">Meghalaya</option>
+					<option value="24">Mizoram</option>
+					<option value="25">Nagaland</option>
+					<option value="26">Odisha</option>
+					<option value="27">Puducherry</option>
+					<option value="28">Punjab</option>
+					<option value="29">Rajasthan</option>
+					<option value="30">Sikkim</option>
+					<option value="31">Tamil Nadu</option>
+					<option value="32">Telangana</option>
+					<option value="33">Tripura</option>
+					<option value="34">Uttar Pradesh</option>
+					<option value="35">Uttarakhand</option>
+					<option value="36">West Bengal</option>
+				</select> <br>
+				<br>
+				<div>
+
+					<input type="button" class="sav " value="Save"> 
+					<input type="Reset" value="Reset" id="btnPersonalReset"
+						name="btnPersonalReset" class="rest " > 
+				    <input type="button" class="cls " value="Close">
+
+				</div>
+				<p id="demo"></p>
+				<br>
+				<br>
+
+			</div>
+
+		</div>
+	</form>
+	</div>
+	<script type="text/javascript">
+		function DoYouHaveAadhaar() {
+			var rbAadharYes = document.getElementById("rbAadharYes");
+			var rbAadharNo = document.getElementById("rbAadharNo");
+			var lblAadharSupp = document.getElementById("lblAadharSupp");
+			var lblAadharSupp1 = document.getElementById("lblAadharSupp1");
+			var IDnumbersupp1 = document.getElementById("IDnumbersupp1");
+			var IDnumbersupp = document.getElementById("IDnumbersupp");
+			lblAadharSupp.disabled = rbAadharYes.checked ? false : true;
+			lblAadharSupp1.disabled = rbAadharYes.checked ? false : true;
+			IDnumbersupp1.disabled = rbAadharNo.checked ? false : true;
+			IDnumbersupp.disabled = rbAadharNo.checked ? false : true;
+			if (!lblAadharSupp.disabled && !lblAadharSupp1.disabled && !IDnumbersupp1.disabled && !IDnumbersupp.disabled) {
+				
+				lblAadharSupp1.focus();
+				lblAadharSupp.focus();
+				IDnumbersupp1.focus();
+				IDnumbersupp.focus();
+			}
+		}
+		function HaveYouEverChangedName(){
+			var rbHaveEverChangedNameYes = document.getElementById("rbHaveEverChangedNameYes");
+			 var lblnewnamesupp = document.getElementById("lblnewnamesupp");
+			 lblnewnamesupp.disabled = rbHaveEverChangedNameYes.checked ? false : true;
+			 if (!lblnewnamesupp.disabled){
+				 lblnewnamesupp.focus();
+			 }
+		}
+	</script>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js">
+    </script>
+  
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">
+    </script>
+  
+    
+  
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+</body>
+
+</html>
